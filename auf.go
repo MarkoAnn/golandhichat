@@ -18,12 +18,13 @@ func mHandler(w http.ResponseWriter, r *http.Request) {
 	number2, err1 := strconv.Atoi(str2)
 	if err != nil {
 		w.WriteHeader(400)
-		fmt.Fprintf(w, "status code:40")
+		fmt.Fprintf(w, "status code:400")
+		return
 	}
 	if err1 != nil {
 		w.WriteHeader(400)
-		fmt.Fprintf(w, "status code:40")
-
+		fmt.Fprintf(w, "status code:400")
+		return
 	}
 	if err1 == nil {
 		fmt.Fprintf(w, strconv.Itoa(number1*number2))
