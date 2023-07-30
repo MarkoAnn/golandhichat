@@ -26,6 +26,7 @@ func mHandler(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "status code:400")
 		return
 	}
+
 	fmt.Fprintf(w, strconv.Itoa(number1*number2))
 
 }
