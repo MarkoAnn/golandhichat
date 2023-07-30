@@ -2,15 +2,61 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"log"
 	"net/http"
+	"os"
 	"strconv"
 )
+
+func main() {
+	http.HandleFunc("/", textHandler)
+	http.HandleFunc("/hichat", mHandler)
+	log.Fatal(http.ListenAndServe(":8080", nil))
+}
+
+func textHandler(w http.ResponseWriter, r *http.Request) {
+
+	text := "hi chat test"
+	file, err := os.Create("hichat.txt")
+	if err != nil {
+		fmt.Printf("ошибка создать файл[%s]", err.Error())
+		return
+	}
+	writeString, err := file.WriteString(text)
+	if err != nil {
+		fmt.Printf("ошибка создать файл[%s]", err.Error())
+
+	}
+	println(file.Name())
+	println(writeString)
+
+	openfile, err := os.Open(file.Name())
+	if err != nil {
+		fmt.Printf("ошибка чтения файла[%s]", err.Error())
+		return
+	}
+	bufer := make([]byte, writeString)
+	for {
+		_, err := openfile.Read(bufer)
+		if err != io.EOF {
+			break
+		}
+
+		if err != nil {
+			fmt.Printf("ошибка чтения файла[%s]", err.Error())
+			break
+		}
+
+	}
+	fmt.Fprintf(w, string(bufer))
+}
 
 func MyHandler(w http.ResponseWriter, r *http.Request) {
 	queryParam := r.URL.Query().Get("name")
 	fmt.Fprintf(w, "Ты передал параметр: %s", queryParam)
 }
+
 func mHandler(w http.ResponseWriter, r *http.Request) {
 	str2 := r.URL.Query().Get("x")
 	str1 := r.URL.Query().Get("y")
@@ -34,11 +80,4 @@ func mHandler(w http.ResponseWriter, r *http.Request) {
 func yHandler(w http.ResponseWriter, r *http.Request) {
 	queryParam := r.URL.Query().Get("y")
 	fmt.Fprintf(w, "x= %s", queryParam)
-}
-
-func main() {
-	http.HandleFunc("/", mHandler)
-
-	log.Fatal(http.ListenAndServe(":8080", nil))
-
 }
