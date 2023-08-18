@@ -4,7 +4,6 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="54004a27-92c8-443a-a07f-4ffc4e830fff" name="Changes" comment="newproj" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +24,20 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;MarkoAnn&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="789b0431-478d-4f3f-8406-711a7b94d8d7" />
+        <option name="url" value="https://github.com/MarkoAnn/golandhichat.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -47,7 +60,7 @@
     &quot;RunOnceActivity.go.modules.automatic.dependencies.download&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;hichattest&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Marko/GolandProjects/awesomeProject1/file&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -55,8 +68,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;
   }
 }</component>
-  <component name="RunManager" selected="Go Build.go build awesomeProject1">
-    <configuration name="go build awesomeProject1" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+
       <module name="awesomeProject1" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
@@ -65,7 +77,7 @@
       <filePath value="$PROJECT_DIR$/auf.go" />
       <method v="2" />
     </configuration>
-    <configuration name="go build cache.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+
       <module name="awesomeProject1" />
       <working_directory value="$PROJECT_DIR$/file" />
       <kind value="FILE" />
@@ -76,8 +88,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build awesomeProject1" />
-        <item itemvalue="Go Build.go build cache.go" />
       </list>
     </recent_temporary>
   </component>
