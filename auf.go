@@ -1,6 +1,8 @@
 package main
 
 import (
+	"awesomeProject1/file"
+	_ "awesomeProject1/file"
 	"fmt"
 	"io"
 	"log"
@@ -10,6 +12,14 @@ import (
 )
 
 func main() {
+
+	some := file.NewCache("hichat.txt")
+
+	err := some.Update()
+	if err != nil {
+		panic(err)
+	}
+	http.HandleFunc("/cache", some.HandleRequest)
 	http.HandleFunc("/", textHandler)
 	http.HandleFunc("/hichat", mHandler)
 	log.Fatal(http.ListenAndServe(":8080", nil))
